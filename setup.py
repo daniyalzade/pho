@@ -1,4 +1,4 @@
-from setuptools import setup
+# -*- coding: utf-8 -*-
 """
 pho: High performance HTML parser built on lxml
 ===============================================
@@ -25,6 +25,8 @@ Usage
     Pho(requests.get('http://google.com').content).find('title').get_text()
 """
 
+from setuptools import setup
+
 requires = [
         'lxml'
         ]
@@ -42,7 +44,7 @@ setup(
     description='High performance HTML parser built on lxml',
     long_description=__doc__,
     install_requires=requires,
-    version='0.0.2',
+    version='0.0.3',
     package_dir={
         'pho': 'pho'
         },
