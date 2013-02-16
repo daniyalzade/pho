@@ -1,0 +1,4 @@
+lxml
+
+# -- testing --
+nose
