@@ -42,7 +42,7 @@ setup(
     description='High performance HTML parser built on lxml',
     long_description=__doc__,
     install_requires=requires,
-    version='0.0.1',
+    version='0.0.2',
     package_dir={
         'pho': 'pho'
         },
