@@ -1,4 +1,29 @@
 from setuptools import setup
+"""
+pho: High performance HTML parser built on lxml
+===============================================
+
+pho is a library built on lxml, and implements the [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) apis. It is meant to be a drop in replacement for BS.
+
+
+Installation
+------------
+
+To install requests, simply: ::
+
+    $ pip install pho
+
+Pho tries to pip install lxml, and for lxml you will need the following packages installed in your system.
+
+
+Usage
+------
+
+    import pho
+    import requests
+
+    Pho(requests.get('http://google.com').content).find('title').get_text()
+"""
 
 requires = [
         'lxml'
@@ -15,19 +40,10 @@ setup(
     url='http://stylrapp.com',
     packages=packages,
     description='High performance HTML parser built on lxml',
+    long_description=__doc__,
     install_requires=requires,
     version='0.0.1',
-    data_files=[
-        ('', ['README.rst', 'LICENSE']),
-        ],
     package_dir={
         'pho': 'pho'
         },
-    package_data={
-        'pho': [
-            #'*.html',
-            #'*.css',
-            ],
-        },
-    include_package_data=True,
 )
