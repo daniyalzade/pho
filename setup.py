@@ -1,7 +1,8 @@
-from distutils.core import setup
-import pho
+from setuptools import setup
 
-requires = []
+requires = [
+        'lxml'
+        ]
 
 packages = [
     'pho',
@@ -14,8 +15,8 @@ setup(
     url='http://stylrapp.com',
     packages=packages,
     description='High performance HTML parser built on lxml',
-    long_description=open('README.rst').read(),
-    version=pho.__version__,
+    install_requires=requires,
+    version='0.0.1',
     data_files=[
         ('', ['README.rst', 'LICENSE']),
         ],
@@ -28,7 +29,5 @@ setup(
             #'*.css',
             ],
         },
-    license=open('LICENSE').read(),
-    install_requires=requires,
     include_package_data=True,
 )
